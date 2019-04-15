@@ -1,24 +1,21 @@
 import 'dart:convert';
-
-import 'package:dio/dio.dart';
-import 'package:fm/common/config/config.dart';
-import 'package:fm/common/local/local_dao.dart';
-import 'package:fm/common/local/local_storage.dart';
-import 'package:fm/common/net/address.dart';
-import 'package:fm/common/net/code.dart';
-
 import 'dart:collection';
 
+import 'package:dio/dio.dart';
+import 'package:event_bus/event_bus.dart';
+import 'package:fm/common/local/config.dart';
+import 'package:fm/common/local/local_dao.dart';
+import 'package:fm/common/local/local_storage.dart';
 import 'package:fm/common/net/interceptors/error_interceptor.dart';
 import 'package:fm/common/net/interceptors/header_interceptor.dart';
 import 'package:fm/common/net/interceptors/log_interceptor.dart';
-
 import 'package:fm/common/net/interceptors/response_interceptor.dart';
 import 'package:fm/common/net/interceptors/token_interceptor.dart';
-import 'package:fm/common/net/net_data_model.dart';
+import 'package:fm/common/net/net_api_config.dart';
 import 'package:fm/common/redux/user_redux.dart';
 import 'package:fm/common/utils/common_utils.dart';
 import 'package:redux/redux.dart';
+
 
 /// http请求
 class HttpManager {
@@ -58,10 +55,10 @@ class HttpManager {
         } on DioError catch (e) {
             Response errorResponse = e.response == null ? new Response(statusCode: 666) : e.response;
             if (e.type == DioErrorType.CONNECT_TIMEOUT || e.type == DioErrorType.RECEIVE_TIMEOUT) {
-                errorResponse.statusCode = Code.NETWORK_TIMEOUT;
+                errorResponse.statusCode = NetCode.NETWORK_TIMEOUT;
             }
             return new ResultData(
-                Code.errorHandleFunction(errorResponse.statusCode, e.response.data, noTip), false, errorResponse.statusCode);
+                NetCode.errorHandleFunction(errorResponse.statusCode, e.response.data, noTip), false, errorResponse.statusCode);
         }
     }
 

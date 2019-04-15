@@ -5,10 +5,10 @@ import 'package:flutter/rendering.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:flutter_cupertino_localizations/flutter_cupertino_localizations.dart';
-import 'package:fm/common/config/localization/gsy_localizations_delegate.dart';
-import 'package:fm/common/config/style/gsy_style.dart';
-import 'package:fm/common/dataModel/show.dart';
-import 'package:fm/common/net/net_data_model.dart';
+import 'package:fm/common/local/localization/gsy_localizations_delegate.dart';
+import 'package:fm/common/local/style/gsy_style.dart';
+import 'package:fm/common/local/show.dart';
+import 'package:fm/common/net/net_api_config.dart';
 import 'package:fm/common/redux/fm_state.dart';
 import 'package:fm/common/utils/common_utils.dart';
 import 'package:fm/page/home.dart';
@@ -16,9 +16,7 @@ import 'package:fm/page/home_page.dart';
 import 'package:fm/page/login_page.dart';
 import 'package:fm/page/welcome_page.dart';
 import 'package:flutter_redux/flutter_redux.dart';
-import 'package:fm/test/v.dart';
 import 'package:redux/redux.dart';
-import 'package:fm/common/net/code.dart';
 
 void main2() {
     runApp(new FlutterReduxApp());
@@ -132,7 +130,7 @@ class _FMLocalizations extends State<FMLocalizations> {
     @override
     void initState() {
         super.initState();
-        stream = Code.eventBus.on<HttpErrorEvent>().listen((event) {
+        stream = NetCode.eventBus.on<HttpErrorEvent>().listen((event) {
             errorHandleFunction(event.code, event.message);
         });
     }
@@ -148,7 +146,7 @@ class _FMLocalizations extends State<FMLocalizations> {
     
     errorHandleFunction(int code, message) {
         switch (code) {
-            case Code.NETWORK_ERROR:
+            case NetCode.NETWORK_ERROR:
                 Fluttertoast.showToast(msg: CommonUtils.getLocale(context).network_error);
                 break;
             case 401:
@@ -160,7 +158,7 @@ class _FMLocalizations extends State<FMLocalizations> {
             case 404:
                 Fluttertoast.showToast(msg: CommonUtils.getLocale(context).network_error_404);
                 break;
-            case Code.NETWORK_TIMEOUT:
+            case NetCode.NETWORK_TIMEOUT:
             //超时
                 Fluttertoast.showToast(msg: CommonUtils.getLocale(context).network_error_timeout);
                 break;

@@ -1,8 +1,7 @@
-
-
 import 'dart:convert';
 
-///isolate 的 compute 需要静态方法
+
+/// isolate 的 compute 需要静态方法
 class CodeUtils {
 
   static List<dynamic> decodeListResult(String data) {

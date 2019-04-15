@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:fluttertoast/fluttertoast.dart';
-import 'package:fm/common/config/style/gsy_style.dart';
+import 'package:fm/common/local/style/gsy_style.dart';
 import 'package:fm/common/utils/common_utils.dart';
 import 'package:fm/page/widget/gsy_common_option_widget.dart';
 import 'package:photo_view/photo_view.dart';

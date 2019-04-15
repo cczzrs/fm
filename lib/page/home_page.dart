@@ -5,7 +5,7 @@ import 'dart:math';
 import 'package:android_intent/android_intent.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
-import 'package:fm/common/config/style/gsy_style.dart';
+import 'package:fm/common/local/style/gsy_style.dart';
 import 'package:fm/common/redux/fm_state.dart';
 import 'package:fm/common/utils/common_utils.dart';
 import 'package:fm/common/utils/navigator_utils.dart';

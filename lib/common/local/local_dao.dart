@@ -1,7 +1,7 @@
 
 import 'dart:async';
 import 'dart:convert';
-import 'package:fm/common/config/config.dart';
+import 'package:fm/common/local/config.dart';
 import 'package:fm/common/local/local_storage.dart';
 import 'package:fm/common/redux/user_redux.dart';
 import 'package:fm/common/utils/common_utils.dart';

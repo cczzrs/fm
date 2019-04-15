@@ -1,9 +1,9 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
-import 'package:fm/common/config/style/gsy_string_base.dart';
-import 'package:fm/common/config/style/gsy_string_en.dart';
-import 'package:fm/common/config/style/gsy_string_zh.dart';
+import 'package:fm/common/local/style/gsy_string_base.dart';
+import 'package:fm/common/local/style/gsy_string_en.dart';
+import 'package:fm/common/local/style/gsy_string_zh.dart';
 
 /// 自定义多语言实现
 class GSYLocalizations {

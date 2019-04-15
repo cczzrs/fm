@@ -6,10 +6,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_cache_manager/flutter_cache_manager.dart';
 import 'package:fluttertoast/fluttertoast.dart';
-import 'package:fm/common/config/localization/default_localizations.dart';
-import 'package:fm/common/config/style/gsy_string_base.dart';
-import 'package:fm/common/config/style/gsy_style.dart';
-import 'package:fm/common/net/address.dart';
+import 'package:fm/common/local/localization/default_localizations.dart';
+import 'package:fm/common/local/style/gsy_string_base.dart';
+import 'package:fm/common/local/style/gsy_style.dart';
+import 'package:fm/common/net/net_api_config.dart';
 import 'package:fm/common/redux/fm_state.dart';
 import 'package:fm/common/redux/locale_redux.dart';
 import 'package:fm/common/redux/theme_redux.dart';
@@ -23,11 +23,7 @@ import 'package:redux/redux.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:flutter_statusbar/flutter_statusbar.dart';
 
-/**
- * 通用逻辑
- * Created by guoshuyu
- * Date: 2018-07-16
- */
+/// 小巧逻辑功能
 class CommonUtils {
   static final double MILLIS_LIMIT = 1000.0;
 
@@ -52,10 +48,6 @@ class CommonUtils {
       return date.toString();
     }
     return date.toString().substring(0, 10);
-  }
-
-  static String getUserChartAddress(String userName) {
-    return Address.graphicHost + GSYColors.primaryValueString.replaceAll("#", "") + "/" + userName;
   }
 
   ///日期格式转换

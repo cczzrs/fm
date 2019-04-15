@@ -1,4 +1,4 @@
-import 'package:fm/common/config/style/gsy_string_base.dart';
+import 'package:fm/common/local/style/gsy_string_base.dart';
 
 /*
  * Created by cczzrs

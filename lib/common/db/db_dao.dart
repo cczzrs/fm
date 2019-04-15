@@ -5,6 +5,15 @@ import 'package:intl/intl.dart';
 import 'package:sqflite/sqflite.dart';
 import 'package:crypto/crypto.dart';
 import 'package:convert/convert.dart';
+import 'dart:async';
+
+class DataResult {
+    var data;
+    bool result;
+    Future next;
+
+    DataResult(this.data, this.result, {this.next});
+}
 
 /// fmwl_main 表操作
 class MainDao {

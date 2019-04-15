@@ -1,5 +1,5 @@
 import 'package:dio/dio.dart';
-import 'package:fm/common/config/config.dart';
+import 'package:fm/common/local/config.dart';
 
 /**
  * Log 拦截器

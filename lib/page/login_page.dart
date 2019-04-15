@@ -2,8 +2,8 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
-import 'package:fm/common/config/config.dart';
-import 'package:fm/common/config/style/gsy_style.dart';
+import 'package:fm/common/local/config.dart';
+import 'package:fm/common/local/style/gsy_style.dart';
 import 'package:fm/common/local/local_storage.dart';
 import 'package:fm/common/net/api.dart';
 import 'package:fm/common/redux/fm_state.dart';
@@ -73,7 +73,7 @@ class _LoginPageState extends State<LoginPage> {
 //                borderRadius: BorderRadius.all(Radius.circular(4.0)),
               image: new DecorationImage(
                 image: AssetImage(
-                  "static/images/bjt-13.png",
+                  "static/images/home-bg.png",
                 ),
                 fit: BoxFit.cover,
               ),

@@ -173,7 +173,7 @@ class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateM
 //                borderRadius: BorderRadius.all(Radius.circular(4.0)),
         image: new DecorationImage(
           image: AssetImage(
-            "static/images/bjt-13.png",
+            "static/images/home-bg.png",
           ),
           fit: BoxFit.cover,
         ),

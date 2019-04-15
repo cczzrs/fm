@@ -1,5 +1,5 @@
 import 'package:dio/dio.dart';
-import 'package:fm/common/config/config.dart';
+import 'package:fm/common/local/config.dart';
 import 'package:fm/common/local/local_storage.dart';
 
 /**

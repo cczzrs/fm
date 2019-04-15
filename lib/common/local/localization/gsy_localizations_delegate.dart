@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:fm/common/config/localization/default_localizations.dart';
+import 'package:fm/common/local/localization/default_localizations.dart';
 
 /// 多语言代理
 class FMLocalizationsDelegate extends LocalizationsDelegate<GSYLocalizations> {

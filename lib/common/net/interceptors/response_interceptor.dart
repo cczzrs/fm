@@ -1,6 +1,5 @@
 import 'package:dio/dio.dart';
-import 'package:fm/common/net/code.dart';
-import 'package:fm/common/net/net_data_model.dart';
+import 'package:fm/common/net/net_api_config.dart';
 
 /**
  * Token拦截器
@@ -14,10 +13,10 @@ class ResponseInterceptors extends InterceptorsWrapper {
     RequestOptions option = response.request;
     try {
       if (option.contentType != null && option.contentType.primaryType == "text") {
-        return new ResultData(response.data, true, Code.SUCCESS);
+        return new ResultData(response.data, true, NetCode.SUCCESS);
       }
       if (response.statusCode == 200 || response.statusCode == 201) {
-        return new ResultData(response.data, true, Code.SUCCESS, headers: response.headers);
+        return new ResultData(response.data, true, NetCode.SUCCESS, headers: response.headers);
       }
     } catch (e) {
       print(e.toString() + option.path);

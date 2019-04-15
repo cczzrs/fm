@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
-import 'package:fm/common/config/config.dart';
-import 'package:fm/common/config/localization/default_localizations.dart';
-import 'package:fm/common/config/style/gsy_style.dart';
+import 'package:fm/common/local/config.dart';
+import 'package:fm/common/local/localization/default_localizations.dart';
+import 'package:fm/common/local/style/gsy_style.dart';
 import 'package:fm/common/local/local_storage.dart';
 import 'package:fm/common/redux/fm_state.dart';
 import 'package:fm/common/utils/common_utils.dart';
@@ -74,7 +74,7 @@ class _HomeDrawerState extends State<HomeDrawer> with SingleTickerProviderStateM
                 decoration: new BoxDecoration(
                     image: new DecorationImage(
                         image: AssetImage(
-                            "static/images/bjt-13.png",
+                            "static/images/home-bg.png",
                         ),
                         fit: BoxFit.cover,
                     ),

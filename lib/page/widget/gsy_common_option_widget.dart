@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:fm/common/config/style/gsy_style.dart';
+import 'package:fm/common/local/style/gsy_style.dart';
 import 'package:fm/common/utils/common_utils.dart';
 import 'package:share/share.dart';
 
